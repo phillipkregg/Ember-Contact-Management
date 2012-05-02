@@ -1,0 +1,17 @@
+<table class="table">
+	<thead>
+		<tr>
+			<th>First Name</th>
+			<th>Last Name</th>
+			<th>Address</th>
+			<th>City</th>
+			<th>State</th>
+			<th>Phone Number</th>
+		</tr>
+	</thead>
+	<tbody>
+		{{#each contacts}}
+			{{view App.ShowContactView contactBinding="this"}}
+		{{/each}}
+	</tbody>
+</table>
