@@ -12,6 +12,16 @@
 	<tbody>
 		{{#each contacts}}
 			{{view App.ShowContactView contactBinding="this"}}
-		{{/each}}
+		{{/each}}		
 	</tbody>
 </table>
+
+{{#if isNewVisible}}	
+	<div class="well">
+	{{view App.NewContactView}}
+	</div>
+{{/if}}
+
+<div>
+	<button href="#" class="btn btn-primary"  {{action "showNew"}}>New Contact</button>
+</div>
