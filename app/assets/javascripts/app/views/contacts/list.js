@@ -10,6 +10,11 @@ App.ListContactsView = Ember.View.extend({
 	
 	hideNew: function() {
 		this.set('isNewVisible', false);
-	}
+	},
 	
+	
+	hideEdit: function() {
+		this.set('isEditing', false);	   
+	}
+
 });

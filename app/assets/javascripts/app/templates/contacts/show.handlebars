@@ -5,5 +5,11 @@
 <td>{{contact.city}}</td>
 <td>{{contact.state}}</td>
 <td>{{contact.phone_num}}</td>
-
+<td>
+<div class="commands">	
+  <a href="#add_contact_modal" class="btn btn-mini" data-toggle="modal">Edit</a>
+  <button href="#" class="btn btn-mini btn-danger" {{action "destroyRecord"}}>Remove</button>
+	
+</div>
+</td>
 

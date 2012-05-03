@@ -3,8 +3,21 @@ App.NewContactView = Ember.View.extend({
 	templateName:   'app/templates/contacts/edit',
 	
 	init: function() {
-		this._super();
-		this.set("contact", App.Contact.create());
+		this._super();		
+		
+		
+		var contact = this.get("contact");
+		//alert(contact.first_name);
+		
+		if (contact) {
+			this.set("contact", contact.findResource());
+			alert(contact.name + "is the Edit resource")
+		} else {
+			this.set("contact", App.Contact.create());
+		}
+		
+	
+		
 		
 	},
 	
