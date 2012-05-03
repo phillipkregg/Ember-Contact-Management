@@ -16,12 +16,25 @@
 	</tbody>
 </table>
 
-{{#if isNewVisible}}	
-	<div class="well">
-	{{view App.NewContactView}}
+<div class="modal hide fade in" id="add_contact_modal">
+	<div class="modal-header">
+	   <button class="close" data-dismiss="modal">×</button>
+	   <h3>{{#if id}} Update {{else}} Create {{/if}} Contact</h3>
 	</div>
-{{/if}}
+	<div class="modal-body">
+		{{view App.NewContactView}}	
+	</div>
+</div>	
 
 <div>
-	<button href="#" class="btn btn-primary"  {{action "showNew"}}>New Contact</button>
+	<button href="#add_contact_modal" class="btn btn-primary" data-toggle="modal">New Contact</button>
 </div>
+
+
+<script type="text/javascript">
+	$("#add_contact_modal").modal({
+		
+	});
+</script>
+
+

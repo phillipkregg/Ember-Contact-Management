@@ -1,9 +1,22 @@
+
+
+
 {{#with contact}}
-	{{view Ember.TextField valueBinding="first_name" placeholder="First Name"}}
-	{{view Ember.TextField valueBinding="last_name" placeholder="Last Name"}}
-	<button type="submit">
-		{{#if id}} Update {{else}} Create {{/if}}
-	</button>
+	{{view Ember.TextField valueBinding="first_name" placeholder="First Name"}}</br>
+	{{view Ember.TextField valueBinding="last_name" placeholder="Last Name"}}</br>
+	{{view Ember.TextField valueBinding="address" placeholder="Street Address"}}</br>
+	{{view Ember.TextField valueBinding="city" placeholder="City"}}</br>
+	{{view Ember.TextField valueBinding="state" placeholder="State"}}</br>
+	{{view Ember.TextField valueBinding="phone_num" placeholder="Phone Number"}}
+	
+	<div class="modal-footer">
+	 <a href="#" data-dismiss="modal" class="btn">Close</a>
+	 <button type="submit" class="btn btn-primary">
+	 	{{#if id}} Update {{else}} Create {{/if}}
+	 </button>
+	</div>
 {{/with}}
 
-<a href="#" {{action "cancelForm"}}>Cancel</a>
+
+
+
